@@ -1,0 +1,102 @@
+
+.rammi a {
+    text-decoration: none;
+}
+
+.augl {
+    border: 2px solid rgb(12, 47, 121);
+    width: 290px;
+    height:480px;
+    background: skyblue; /*url("img/panorama.jpg") no-repeat fixed bottom;*/
+    overflow: hidden;
+}
+
+#panorama {
+    position: relative;
+    top:-500px;
+    animation: pano 200s 1 ease-out;
+}
+#panorama img {
+    max-width: 891px;
+    height: auto;
+}
+#belgur1 {
+    position: relative;
+    top:-20em;
+    right:-20em;
+    z-index: 10;
+    animation: belgur 33s infinite;
+}
+
+/* Kvikun */
+#haha {
+    color:whitesmoke;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 300;
+    font-size: 2em;
+    font-style: oblique;
+    z-index: 20;
+    position: relative;
+    top:0;
+    left:0;
+    animation: kvikun 10s 1;
+}
+@keyframes kvikun {
+    0%   {
+        left: -16px;
+        opacity: 0;
+    }
+    50%   {
+        left: -16px;
+        opacity: 0;
+    }
+    100% {
+        left: 0;
+        opacity: 1;
+    }
+}
+@keyframes pano {
+    0%   {
+        right: 0;
+
+    }
+    10% {
+        right: 240px;
+    }
+    100% {
+        right: 240px;
+    }
+}
+@keyframes belgur {
+    0%   {
+        right: -320px;
+        top: -320px
+    }
+    50%   {
+        right: -320px;
+        top: -320px
+    }
+    75% {
+        right: -30px;
+        top: -150px;
+    }
+    80% {
+        right: -30px;
+        top: -150px;
+    }
+    100% {
+        right: 240px;
+        top: -200px;
+    }
+}
+@media screen and (min-width:30em){
+    .augl {
+        width: 20em;
+    }
+}
+@media screen and (min-width:37.5em){
+    .augl {
+        width: 22.5;
+    }
+}

@@ -1,0 +1,100 @@
+
+/**************** Töflur <table> ******************/
+
+/* favorite taflan */
+.favorite {
+    border-collapse: collapse;
+  /*  border-collapse: separate; */
+    margin: 0 0 2em 0;
+    padding: 1em;
+    width: 100%;
+  /*  table-layout: fixed; */
+    box-shadow: -5px 10px 10px #afaca8;
+  }
+  .favorite caption {
+    font-size: 1.5em;
+    margin: .5em 0 .75em;
+  }
+  .favorite tr {
+    background: #ededed;
+    border-bottom: 1px solid #bbb;
+    padding: .35em;
+  }
+  .favorite th,
+  .favorite td {
+    padding: .625em;
+  }
+  .favorite th {
+    font-size: .9em;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    text-align: left;  /*sjálfgefið center */
+  }
+  .favorite tbody tr:nth-child(odd) {
+    background: #fefefe;
+  }
+  /* Hornin rúnuð af töflunni -- ath! */
+  .favorite th:first-child {
+    border-top-left-radius: .8em;
+    text-align: left;
+  }
+  .favorite th:last-child {
+    border-top-right-radius: .8em;
+  }
+  .favorite tfoot tr:last-child td:first-child {
+    border-bottom-left-radius: .8em;
+  }
+  .favorite tfoot tr:last-child td:last-child {
+    border-bottom-right-radius: .8em;
+  }
+  .favorite a {
+    text-decoration: none;
+  }
+  .favorite a:hover {
+    text-decoration: underline;
+  }
+  .overflow table {
+    margin: 1em 0;
+  }
+
+  /* athugið favorite taflan er stíluð niður með "max-width" (en ekki mobile-up). 
+   allt sem er kóðað hér fyrir ofan er fyrir stærri skjái en 44em - 704px */
+  
+  @media screen and (max-width: 44em) { 
+      .favorite {
+          width: 96%;
+      }
+      .favorite caption {
+      font-size: 1.3em;
+      }
+      .favorite thead {  /* í litlum skjáum hverfur thead */
+      display: none;
+      }
+      .favorite tr {
+      border-bottom: 3px solid #ddd;
+      display: block;
+      margin-bottom: .625em;
+      }
+      .favorite td {
+      border-bottom: 1px solid #ddd;
+      display: block;
+      font-size: .8em;
+      text-align: right;
+      }
+      .favorite td:before {
+      content: attr(data-label);  /* athugið kóðann hér */
+      float: left;
+      font-weight: bold;
+      text-transform: uppercase;
+      }
+      .favorite td:last-child {
+      border-bottom: 0;
+      }
+      /* overflow verður að vera með fasta x og y stærðir 
+          sama vandamál með iframe */
+      .overflow {
+      width: 96%;
+      height: 10em;
+      overflow: scroll visible;
+      } 
+  }

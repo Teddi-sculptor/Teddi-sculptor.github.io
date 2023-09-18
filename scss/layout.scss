@@ -1,0 +1,391 @@
+// SCSS breytur
+$mycolor: #622116;
+$navcolor: rgba(5, 24, 8, 0.9);
+$acolor: rgb(255, 240, 206);
+$acolorvisit: rgb(245, 208, 140);
+$green: rgb(0, 37, 10);
+$orange: rgb(200, 80, 0);
+
+.brown {
+    background-color:$mycolor;
+}
+.darken {
+    background-color: darken($mycolor,10%);
+}
+.dark {
+    background-color: darken($mycolor,15%);
+} 
+.bgreen {
+    background-color: $green;
+}
+.darkgreen {
+    background-color: darken($green,10%);
+}
+* { 
+    box-sizing: border-box 
+} 
+html {
+    scroll-behavior: smooth;
+}
+body {
+    margin: 2.9em 0 .2em 0; 
+    background-color: $orange;
+    color: rgb(221, 221, 221);
+    font: 400 1em/1.6 "Open Sans", sans-serif; 
+
+}
+.slides {
+    background-color: $mycolor;
+}
+h1 {
+    font-weight: 300;
+    font-size: 1.8em;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+iframe {
+    display: block;
+}
+a {
+    color: #F7D37E;
+}
+a:visited {
+    color: #fff9eb;
+}
+.imgblock {
+    display: block;
+}
+/* myndataflan */
+.imgtable {
+  border-collapse: collapse;
+  width:100%;
+  margin-bottom:2em;
+}
+.frontpage {
+    background: url("../images/mobilegallery.jpg");
+}
+.frontpage h1 {
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 1em;
+    font-size: 2.2em;
+}
+.frontpage h4 {
+    color: $navcolor;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1.3em;
+}
+blockquote {
+    background-color: rgba(255,255,255,0.3); /* (r,g,b,opacity 0-1)*/
+    padding: 1em 1em 1em 3em;
+    margin: 0;
+}
+blockquote ul {
+    list-style-type: none;
+}
+footer {
+    padding: 1em;
+}
+/* grid base */
+.col-2 {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 0 1em;
+}
+.col-3 {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+/******** takki *****/
+.topbutt {
+    display: none;
+}
+
+.copy {
+    color:#fff;
+    text-align: center;
+    margin-bottom: 2em;
+}
+ 
+
+.skyring {
+    margin:0;
+    padding:1em 0 0 0;
+}
+.f-right {
+    text-align: right;
+}
+/*************** Efnisyfirlit base *****************/ 
+.headernav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 2.7em;
+    background-color: $navcolor;
+    z-index: 800;
+}
+.navmenu {
+    display: grid;
+    grid-template-columns: 1fr;
+    position: fixed;
+    width: 52%;
+    top: 0;
+    right: 0;
+}
+.menuinput {
+    display: none;
+}
+.menulabel {
+    color: #fff;
+    font-size: 1.5em;
+    position: fixed;
+    top: .2em;
+    right: .8em;
+    transition: all .5s ease;
+}
+.navlogo {
+    position: fixed;
+    top: .3em;
+    left: 1em;
+}
+.navlogo a{
+    display: block;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    letter-spacing: 4px;
+    font-size: 2em;
+    font-weight: 400;
+    color: #fff;
+    /*border: 1px solid red;*/
+}
+
+.topmenu {
+    position: relative;
+    top:2.7em;
+    right: -25em;
+    display: flex;
+    flex-flow: column; /* ath ! */
+    justify-content: flex-end;
+    margin:0; /* yfirrita sjálfgefið margin í ul */
+    padding: .3em;
+    background-color: $mycolor;
+    transition: right .5s cubic-bezier(0.15, 0.99, 1, 1); /* https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions */
+    z-index: 999;
+}
+.topmenu li {
+    list-style-type: none;
+    border-bottom: 2px solid $orange;
+}
+.topmenu a {
+    display: block;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: .9em;
+    padding: .5em 1em;
+    z-index: 999;
+}
+.topmenu a:visited, .topmenu a:hover  {
+    color: rgb(255, 167, 25);
+}
+.topmenu a:last-child {
+    padding-right: 2em;
+}
+.menuinput:checked ~ .topmenu {
+    right: 0;
+}
+/* menu táknið kvikað */
+.menuinput:checked + .menulabel {
+    transform: translate(-10px, 0) rotate(-90deg) ; 
+    transition: all .5s ease;
+} 
+/* space around */
+
+.mtop5 {
+    margin-top: 5em;
+}
+.ptop3 {
+    padding-top:3em;
+}
+.pright {
+    padding:0;
+}
+.pleft {
+    padding:0; 
+}
+.p-topbott1 {
+    padding: 1em 0;
+}
+.sold span {
+    color: orangered;
+}
+/************** Viðmið 30em = 480px farsímar *******************/
+@media screen and (min-width: 30em) {  
+    .col-4 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (min-width: 48em) {  
+    .headernav {
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        justify-content: space-between;
+        position: fixed;
+        width: 100%;
+    }
+    .menulabel {
+        display: none;
+    } 
+    .navmenu {
+        position: fixed;
+        width: 90%;
+        top: 0;
+        right: 0;
+    }
+    .navlogo {
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+    .navlogo a{
+        display: block;
+        padding:  0 2em;
+        font-size: 2.2em;
+    }
+    .logo {
+        width: 66px;
+        height: 25px;
+    }
+    .topmenu {
+        top:0;
+        right: 0;
+        display: flex;
+        flex-flow: row; /* ath ! */
+        justify-content: flex-end;
+        margin:0; /* yfirrita sjálfgefið margin í ul */
+        padding: .3em;
+        background-color: rgba(10, 22, 90, 0);
+    }
+    .topmenu li {
+        border:0;
+    }
+    .topmenu a {
+        display: block;
+        color:  rgb(255, 181, 61);
+        text-transform: uppercase;
+        text-decoration: none;
+        font-size: .9em;
+        padding: .5em 1em;
+    }
+    .topmenu a:visited, .topmenu a:hover  {
+        color: rgb(251, 213, 152);
+    }
+    .topmenu a:last-child {
+        padding-right: 2em;
+    }
+    /* grid */
+    .col-2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 0;
+    }
+    .col-3 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1em;
+    }
+    .col-4 {
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+    }
+    .gap {
+        grid-gap: 2em
+    }
+    .frontpage {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    .circle {
+        width: 30em;
+        height: 30em;
+    }
+    .foot {
+        padding: 0;
+    } 
+    .footermenu {
+        margin: 1em 0 0 0;
+        padding: 0;
+    }
+    .dlst {
+        margin-top: 2em;
+    }
+    nav h1 {
+        margin:.5em;
+    }
+    /******** takki *****/
+    .topbutt {
+        display: block;
+        background-color: $mycolor;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 50%;
+        color: #fff;
+        font-size: 1.5em;
+        position:relative; 
+        z-index: 10;
+        width: 1.5em;
+        padding: 0 .2em;
+        margin: 0 auto;
+    }
+    .topbutt:active, .topbutt:hover  {
+        background-color: $mycolor;
+        color: #fff;
+    }
+    .gap3 {
+        grid-gap: 3em
+    }
+    .pleft {
+        padding:3em 1em 0 3em; 
+    }
+    .pright {
+        padding:3em 3em 0 0;
+    }
+    .pright-2 {
+        padding-right: 2em;
+    }
+}
+
+/************** Viðmið 60em 960px = fartölvur *******************/
+
+@media screen and (min-width: 60em) {  
+    .container {
+        max-width: 60em; /* verður ekki breiðari dálkur */
+        margin: 0 auto; /* top+bottom og left+right */
+        padding: 0;
+    }
+ .frontpage h1 {
+        font-size: 6em;
+        margin: .5em 0;
+    }
+    h1 {
+        font-size: 2.5em;
+    }
+    .col-3 {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .verkefni {
+        text-align: right;
+        color: #F7D37E;
+    }
+}

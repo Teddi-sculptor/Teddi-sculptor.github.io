@@ -1,0 +1,21 @@
+
+/********* bakgrunnar **********/
+.bgleft {
+    background: linear-gradient(to left, #F7D37E, #f6f1d3);
+    padding: 1em;
+}
+.bgright {
+    background: linear-gradient(to right, #93f5dd, #f6f1d3);
+    padding: 1em;
+}
+.bgbottom {
+    background: linear-gradient(to bottom, #dd93f5, #f6f1d3);
+    padding: 1em;
+}
+// links
+a {
+    color: $acolor;
+}
+a:visited {
+    color: $acolorvisit;
+}

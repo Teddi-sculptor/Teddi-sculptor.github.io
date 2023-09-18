@@ -1,0 +1,105 @@
+/*========================================
+  order form
+  ======================================== */
+.order {
+    padding: 1em;
+}
+.order form {
+margin-bottom: 1em;
+}
+.order legend {
+  font-weight:bold;
+}
+.order fieldset {
+
+  padding: 1em;
+  margin: 0 .5em;
+}
+.order label {
+  cursor: pointer;
+}
+.order input,
+.order select,
+.order textarea {
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  margin: .3em 0 1em 0;
+  padding:.5em;
+}
+/* fix til að fá label textann fyrir ofan input tagið */
+.order input[type=text],
+.order input[type=tel],
+.order input[type=email],
+.order input[type=url],
+.order input[type=date],
+.order textarea,
+.order select {
+  width: 100%;
+}
+.order textarea {
+  font-family: monospace;  /*ritvélaletur */
+  font-size: 1.2em;
+}
+.radiolabel label {
+    display: block;
+}
+button,
+.reply,
+.contact input[type=submit],
+.order input[type=submit] {
+  background: linear-gradient(#3a2412, #070400 80%, #3a2412);
+  border: 0;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1.1em;
+  padding: .4em 3em;
+  margin:  .8em;
+  border-radius: .3em;
+  text-align: center;
+  text-decoration: none;
+}
+/* contact formið */
+
+.contact {
+  padding: 1em;
+  border-radius: 5px;
+}
+.contact p {
+  margin: 0 .7em;
+}
+.contact input,
+.contact textarea {
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  margin: .3em 0 1em 0;
+  padding:.5em;
+}
+.contact textarea {
+  font-family: monospace;  /*ritvélaletur */
+  font-size: 1.2em;
+  width: 100%;
+  box-shadow: -4px 4px 4px #999 inset; /* x y width color */
+}
+.contact input[type=text],
+.contact input[type=email],
+.contact input[type=url] {
+  width: 100%;
+  box-shadow: -4px 4px 4px #999 inset; /* x y width color */
+}
+
+@media screen and (min-width: 37.5em) {  
+    .radiolabel label {
+        display: inline;
+        padding: 0 .5em;
+    }
+}
+@media screen and (min-width: 60em) {   
+  .contact {
+    max-width: 56em;
+    margin: 0 auto;
+
+  }
+  .contact {
+    padding: 2em;
+  }
+}
